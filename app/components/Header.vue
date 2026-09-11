@@ -38,7 +38,7 @@
         <LanguageSwitcher />
         <ThemeSwitcher />
         <Button
-          href="https://projects.eclipse.org/projects/technology.qsos"
+          href="https://github.com/eclipse-qsos"
           target="_blank"
           rel="noopener noreferrer"
           variant="brand"
