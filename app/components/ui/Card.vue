@@ -12,25 +12,20 @@
 -->
 <template>
   <article class="card" :data-card-id="id">
-    <!-- Top color indicator (optional, for steps) -->
     <div 
       v-if="color && variant === 'step'" 
       class="card-indicator" 
       :style="{ backgroundColor: color }"
     ></div>
 
-    <!-- Badge/Label (optional, for steps) -->
     <div v-if="label" class="card-label">{{ label }}</div>
 
-    <!-- Title -->
     <h3 class="card-title" :style="variant === 'step' && color ? { color: color } : {}">
       {{ title }}
     </h3>
 
-    <!-- Description -->
     <p class="card-description">{{ description }}</p>
 
-    <!-- Topics list (optional, for criteria) -->
     <ul v-if="topics && topics.length > 0" class="card-topics">
       <li v-for="(topic, index) in topics" :key="index">
         {{ topic }}

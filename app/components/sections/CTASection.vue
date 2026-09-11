@@ -14,17 +14,14 @@
   <section class="cta-section">
     <div class="cta-container">
       <div class="cta-card">
-        <!-- Headline -->
         <h2 class="cta-headline">
           {{ $t('cta.title') }}
         </h2>
 
-        <!-- Supporting Text -->
         <p class="cta-text">
           {{ $t('cta.description') }}
         </p>
 
-        <!-- CTA Buttons -->
         <div class="cta-buttons">
           <Button
             variant="primary"
