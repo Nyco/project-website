@@ -129,31 +129,6 @@
   background-color: var(--muted);
 }
 
-.cta-button {
-  background-color: var(--brand);
-  color: var(--brand-foreground);
-  border: none;
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-md) var(--spacing-2xl);
-  font-weight: 600;
-  font-size: 1rem;
-  transition: background-color 0.2s ease;
-  white-space: nowrap;
-}
-
-.cta-button:hover {
-  background-color: var(--brand-strong);
-}
-
-.header-actions .cta-button.button {
-  background-color: var(--brand);
-  color: var(--brand-foreground);
-}
-
-.header-actions .cta-button.button:hover {
-  background-color: var(--brand-strong);
-}
-
 /* ========================================
    Mobile Menu (MobileMenu.vue)
    ======================================== */
@@ -323,13 +298,4 @@
 .mobile-cta {
   margin: var(--spacing-2xl);
   width: calc(100% - var(--spacing-5xl));
-}
-
-.mobile-cta.button {
-  background-color: var(--brand);
-  color: var(--brand-foreground);
-}
-
-.mobile-cta.button:hover {
-  background-color: var(--brand-strong);
 }

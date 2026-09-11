@@ -14,17 +14,14 @@
   <section id="why" class="why-open-section">
     <div class="why-open-container">
       <div class="why-open-card">
-        <!-- Badge -->
         <div class="why-open-badge">
           <Badge variant="outline">{{ $t('why.badge') }}</Badge>
         </div>
 
-        <!-- Title -->
         <h2 class="why-open-title">
           {{ $t('why.title') }}
         </h2>
 
-        <!-- Description -->
         <p class="why-open-description">
           {{ $t('why.description') }}
         </p>

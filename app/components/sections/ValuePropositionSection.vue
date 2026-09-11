@@ -13,17 +13,14 @@
 <template>
   <section id="value" class="value-proposition-section">
     <div class="value-container">
-      <!-- Badge -->
       <div class="value-badge">
         <Badge variant="outline">{{ $t('value.badge') }}</Badge>
       </div>
 
-      <!-- Title -->
       <h2 class="value-title">
         {{ $t('value.title') }}
       </h2>
 
-      <!-- Value Proposition Cards -->
       <div class="value-cards">
         <Card
           v-for="value in valuePropositions"

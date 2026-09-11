@@ -13,12 +13,10 @@
 <template>
   <footer class="footer">
     <div class="footer-container">
-      <!-- Project Description -->
       <p class="footer-description">
         {{ $t('footer.description') }}
       </p>
 
-      <!-- Links -->
       <nav class="footer-links">
         <a
           href="https://projects.eclipse.org/projects/technology.qsos"
@@ -46,7 +44,6 @@
         </a>
       </nav>
 
-      <!-- Copyright and Licensing -->
       <p class="footer-copyright">
         {{ $t('footer.copyright') }}
       </p>

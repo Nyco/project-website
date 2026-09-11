@@ -13,22 +13,18 @@
 <template>
   <section id="method" class="method-section">
     <div class="method-container">
-      <!-- Badge -->
       <div class="method-badge">
         <Badge variant="outline">{{ $t('method.badge') }}</Badge>
       </div>
 
-      <!-- Title -->
       <h2 class="method-title">
         {{ $t('method.title') }}
       </h2>
 
-      <!-- Description -->
       <p class="method-description">
         {{ $t('method.description') }}
       </p>
 
-      <!-- Method Steps Cards -->
       <div class="method-cards">
         <Card
           v-for="step in methodSteps"

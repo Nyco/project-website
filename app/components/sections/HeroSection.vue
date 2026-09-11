@@ -11,25 +11,21 @@
   SPDX-License-Identifier: Apache-2.0
 -->
 <template>
-  <section class="hero">
-    <div class="hero-container">
-      <!-- Badge -->
+  <section class="hero hero-section">
+    <div class="hero-container content">
       <div class="hero-badge">
         <Badge variant="outline">{{ $t('hero.badge') }}</Badge>
       </div>
 
-      <!-- Headline -->
       <h1 class="hero-title">
         {{ $t('hero.title') }}
         <span class="hero-title-accent">{{ $t('hero.titleAccent') }}</span>
       </h1>
 
-      <!-- Description -->
       <p class="hero-description">
         {{ $t('hero.description') }}
       </p>
 
-      <!-- CTAs -->
       <div class="hero-ctas">
         <Button
           variant="primary"
@@ -45,7 +41,6 @@
         </Button>
       </div>
 
-      <!-- Metadata Footer -->
       <div class="hero-footer">
         <ul class="hero-metadata">
           <li>
@@ -71,6 +66,10 @@
         </div>
       </div>
     </div>
+
+    <div class="radar-container">
+      <RadarWatermark />
+    </div>
   </section>
 </template>
 
@@ -86,6 +85,28 @@ const keyMetrics = computed(() => [
 </script>
 
 <style scoped>
+/* Layout  */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.radar-container {
+  position: absolute;
+  top: 40%;
+  right: -2%;
+  width: 600px;
+  height: 600px;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
 .hero {
   padding: calc(var(--header-height) - 20px) var(--spacing-3xl) var(--spacing-7xl);
   background-color: var(--background);
@@ -200,6 +221,12 @@ const keyMetrics = computed(() => [
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .radar-container { 
+    right: -10%;
+    width: 500px;
+    height: 500px;
+  }
+
   .hero {
     padding: calc(var(--header-height) + var(--spacing-xs)) var(--spacing-2xl) var(--spacing-6xl);
   }
@@ -233,6 +260,13 @@ const keyMetrics = computed(() => [
 }
 
 @media (max-width: 768px) {
+  .radar-container { 
+    right: -5%;
+    top: 20%;
+    width: 470px;
+    height: 470px;
+  }
+
   .hero {
     padding: calc(var(--header-height) + var(--spacing-xs)) var(--spacing-xl) var(--spacing-5xl);
   }
@@ -267,6 +301,13 @@ const keyMetrics = computed(() => [
 }
 
 @media (max-width: 480px) {
+  .radar-container {
+      right: -10%;
+      top: 15%;
+      width: 350px;
+      height: 350px;
+    }
+
   .hero {
     padding: calc(var(--header-height) + var(--spacing-xs)) var(--spacing-lg) var(--spacing-4xl);
   }

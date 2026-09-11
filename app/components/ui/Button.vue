@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 interface Props {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'brand'
   size?: 'sm' | 'md' | 'lg'
   href?: string
   type?: 'button' | 'submit' | 'reset'
@@ -101,6 +101,15 @@ const tag = computed(() => props.href !== undefined ? 'a' : 'button')
 
 .button--ghost:hover {
   background-color: var(--muted);
+}
+
+.button--brand {
+  background-color: var(--brand);
+  color: var(--brand-foreground);
+}
+
+.button--brand:hover {
+  background-color: var(--brand-strong);
 }
 
 /* Sizes */
