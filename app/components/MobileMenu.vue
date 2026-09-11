@@ -47,7 +47,7 @@
         href="https://projects.eclipse.org/projects/technology.qsos"
         target="_blank"
         rel="noopener noreferrer"
-        variant="primary"
+        variant="brand"
         size="md"
         class="cta-button mobile-cta"
         @click="handleCTAClick"
