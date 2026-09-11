@@ -24,6 +24,7 @@
 
         <div class="cta-buttons">
           <Button
+          v-if="false"
             variant="primary"
             size="lg"
             href="https://www.eclipse.org/projects/project.php?id=technology.qsos"
