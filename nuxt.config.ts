@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 
   i18n: {
     defaultLocale: 'en',
-    strategy: 'no_prefix',
+    strategy: 'prefix_except_default',
     locales: [
       { code: 'en', name: 'English', file: 'en.json' },
       { code: 'fr', name: 'Français', file: 'fr.json' }
@@ -32,6 +32,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      baseUrl: '/qsos/',
       title: 'Eclipse QSOS',
       meta: [
         { charset: 'utf-8' },
