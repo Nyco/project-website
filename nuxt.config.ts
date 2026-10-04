@@ -30,6 +30,20 @@ export default defineNuxtConfig({
     }
   ],
 
+  runtimeConfig: {
+    public: {
+      // Public origin used for absolute URLs: NUXT_PUBLIC_SITE_URL=https://example.org npm run generate
+      siteUrl: 'http://localhost:3000'
+    }
+  },
+
+  nitro: {
+    prerender: {
+      // Emitted by server/routes and not linked from pages, so list them for `nuxt generate`
+      routes: ['/robots.txt', '/sitemap.xml', '/llms.txt', '/llms-full.txt']
+    }
+  },
+
   app: {
     // Deployment path, set at build time: NUXT_APP_BASE_URL=/qsos/ npm run generate (defaults to /)
     baseURL: process.env.NUXT_APP_BASE_URL || '/',

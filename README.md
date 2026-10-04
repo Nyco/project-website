@@ -87,3 +87,11 @@ NUXT_APP_BASE_URL=/qsos/ npm run generate
 ```
 
 Then upload the contents of `.output/public` to that location.
+
+### Crawler and LLM files
+
+`npm run generate` also emits `robots.txt`, `sitemap.xml`, `llms.txt` and `llms-full.txt` (see `server/routes/`). Their absolute URLs are built from `NUXT_PUBLIC_SITE_URL` (origin, defaults to `http://localhost:3000`) followed by `NUXT_APP_BASE_URL`:
+
+```bash
+NUXT_PUBLIC_SITE_URL=https://example.org NUXT_APP_BASE_URL=/qsos/ npm run generate
+```
